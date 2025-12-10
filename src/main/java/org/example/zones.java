@@ -20,12 +20,12 @@ public class zones {
         private By Login = By.xpath("//button[text()='Login Without Captcha']");
         private By ClickOnSetting =By.xpath("(//button[@class='MuiButtonBase-root MuiBottomNavigationAction-root css-oeumz8'])[2]");
         private By ClickZones =By.xpath("//div[@aria-label='Zones']//a[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-2wpwt4']");
-private By ClickEdit =By.xpath("(//*[name()='path'])[2]");
+private By ClickEdit =By.xpath("//*[@id=\"1\"]/div[2]/button[1]");
     private By ClickSave =By.xpath("//button[text()='Save']");
 private By DeleteZones =By.xpath("(//button[@type='button'])[3]");
     private By ClickRemove =By.xpath("//button[text()='Remove']");
-
-
+private By ClickExtraInZone =By.xpath("//*[@id=\"root\"]/div/div/div[2]/div[1]");
+private By EnterDescriptionInZone =By.xpath("/html/body/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div/input");
 
 
         // Constructor to initialize driver
@@ -87,6 +87,20 @@ private By DeleteZones =By.xpath("(//button[@type='button'])[3]");
         REMOVE.click();
     }
 
-
+    public void ClickOnTheExtraInZone()
+    {
+        WebElement CLICKEXTRA= wait.until(ExpectedConditions.visibilityOfElementLocated(ClickExtraInZone));
+        CLICKEXTRA.click();
+    }
+    public void EnterTheDescriptionInZone(String EnDINZ)
+    {
+        WebElement ENTERDESRIPTION= wait.until(ExpectedConditions.visibilityOfElementLocated(EnterDescriptionInZone));
+        ENTERDESRIPTION.sendKeys(EnDINZ);
+    }
+    public void ClearEnterTheDescriptionInZone()
+    {
+        WebElement ENTERDESRIPTION= wait.until(ExpectedConditions.visibilityOfElementLocated(EnterDescriptionInZone));
+        ENTERDESRIPTION.clear();
+    }
 
 }

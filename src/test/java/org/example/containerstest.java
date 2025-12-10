@@ -71,11 +71,12 @@ protected WebDriver driver;
 //        launchBrowser();
 //    }
 
+
     @Test
     public void ClickOnTheContainersTest() throws IOException, InterruptedException
     {
         containers containers=new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
+        containers.enterUsername("Admin");
         containers.enterPassword("Leader@123");
         containers.clickLogin();
         Thread.sleep(1000);
@@ -89,17 +90,17 @@ protected WebDriver driver;
     public void CreateTheContainersTest() throws IOException, InterruptedException
     {
         containers containers=new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
+        containers.enterUsername("Admin");
         containers.enterPassword("Leader@123");
         containers.clickLogin();
         Thread.sleep(1000);
         containers.clickOnSetting();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         containers.clickOnTheAddContainers();
         Thread.sleep(1000);
         containers.clickOnTheCreateContainers();
         Thread.sleep(1000);
-        containers.EnterTheIdentifier("24");
+        containers.EnterTheIdentifier("30");
         Thread.sleep(1000);
         containers.EnterTheLatitude("3.99");
         Thread.sleep(1000);
@@ -107,30 +108,29 @@ protected WebDriver driver;
         Thread.sleep(1000);
         containers.EnterTheDistictName("kerala");
         Thread.sleep(1000);
-        containers.EnterTheSerialNumber("7777");
-        Thread.sleep(1000);
-        containers.EnterTheTagNumber("8888");
-
-        Thread.sleep(1000);
-containers.clickOnTheContainersType();
-        Thread.sleep(1000);
-        containers.SelectOnTheContainersType();
-        Thread.sleep(1000);
-containers.ClickOnTheContractors();
-        Thread.sleep(1000);
-        containers.SelectTheContractors();
-        Thread.sleep(1000);
+//        conatiner1.EnterTheSerialNumber("7777");
+//        Thread.sleep(1000);
+//        conatiner1.EnterTheTagNumber("8888");
+//
+//        Thread.sleep(1000);
+//        conatiner1.clickOnTheContainersType();
+//        Thread.sleep(1000);
+//        conatiner1.SelectOnTheContainersType();
+//        Thread.sleep(1000);
+//        conatiner1.ClickOnTheContractors();
+//        Thread.sleep(1000);
+//        conatiner1.SelectTheContractors();
+//        Thread.sleep(1000);
         containers.ClickOnTheZones();
         Thread.sleep(1000);
-containers.SelectTheZones();
+        containers.SelectTheZones();
         Thread.sleep(1000);
         containers.ClickOnTheSave();
     }
-
     @Test
     public void SeeTheContainersStatusTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
         containers.enterPassword("Leader@123");
         containers.clickLogin();
         Thread.sleep(1000);
@@ -140,153 +140,76 @@ containers.SelectTheZones();
         Thread.sleep(1000);
         containers.ClickOnTheContainerStatus();
     }
-
     @Test
     public void EditTheContainersTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
         containers.enterPassword("Leader@123");
         containers.clickLogin();
         Thread.sleep(1000);
         containers.clickOnSetting();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         containers.clickOnTheAddContainers();
         Thread.sleep(1000);
         containers.ClickOnTheEdit();
+        Thread.sleep(2000);
+        containers.ClickOnTheZones();
         Thread.sleep(1000);
-        containers.ClickOnTheNanan();
-        Thread.sleep(1000);
-containers.SelectTheQwell();
+        containers.SelectTheZones();
+//        conatiner1.ClearEnterTheDistictName();
+//        Thread.sleep(1000);
+//        conatiner1.ClearEnterTheDistictName();
+//        Thread.sleep(1000);
+//           conatiner1.EnterTheDistictName("kerala");
         Thread.sleep(1000);
         containers.ClickOnTheSave();
     }
-
     @Test
     public void DeleteTheContainersTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
         containers.enterPassword("Leader@123");
         containers.clickLogin();
         Thread.sleep(1000);
         containers.clickOnSetting();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         containers.clickOnTheAddContainers();
         Thread.sleep(1000);
-        containers.DeleteTheContainers();
+         containers.DeleteTheContainers();
         Thread.sleep(1000);
 //containers.ClickOnTheRemove();
     }
-
-    @Test
-    public void ClickTheContainersLocationTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
-        containers.enterPassword("Leader@123");
-        containers.clickLogin();
-        Thread.sleep(1000);
-        containers.clickOnSetting();
-        Thread.sleep(1000);
-        containers.clickOnTheAddContainers();
-        Thread.sleep(1000);
-        containers.ClickOnTheLocation();
-
-
-    }
-
-    @Test
-    public void ClickTheMovingPageTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
-        containers.enterPassword("Leader@123");
-        containers.clickLogin();
-        Thread.sleep(1000);
-        containers.clickOnSetting();
-        Thread.sleep(1000);
-        containers.clickOnTheAddContainers();
-        Thread.sleep(1000);
-//containers.ClickOnTheMovingPage();
-
-
-    }
-    @Test
-    public void SelectTheZonesTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
-        containers.enterPassword("Leader@123");
-        containers.clickLogin();
-        Thread.sleep(1000);
-        containers.clickOnSetting();
-        Thread.sleep(1000);
-        containers.clickOnTheAddContainers();
-        Thread.sleep(1000);
-        containers.ClickOnTheZZones();
-        Thread.sleep(1000);
-containers.SelectOnTheZZones();
-        Thread.sleep(1000);
-containers.ClickOnTheApply();
-    }
-    @Test
-    public void SelectTheCreatedTimeTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
-        containers.enterPassword("Leader@123");
-        containers.clickLogin();
-        Thread.sleep(1000);
-        containers.clickOnSetting();
-        Thread.sleep(1000);
-        containers.clickOnTheAddContainers();
-        Thread.sleep(1000);
-        containers.ClickOnTheCreatedTime();
-        Thread.sleep(1000);
-containers.SelectOnTheCreatedTime();
-
-    }
-    @Test
-    public void SearchTheContainerTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
-        containers.enterPassword("Leader@123");
-        containers.clickLogin();
-        Thread.sleep(1000);
-        containers.clickOnSetting();
-        Thread.sleep(1000);
-        containers.clickOnTheAddContainers();
-        Thread.sleep(1000);
-        containers.SearchTheContainer("7777");
-
-    }
     @Test
     public void FilterContainerTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
-        containers.enterPassword("Leader@123");
-        containers.clickLogin();
-        Thread.sleep(1000);
-        containers.clickOnSetting();
-        Thread.sleep(1000);
-        containers.clickOnTheAddContainers();
-        Thread.sleep(1000);
+            containers containers=new containers(driver);
+        containers.enterUsername("Admin");
+            containers.enterPassword("Leader@123");
+            containers.clickLogin();
+            Thread.sleep(1000);
+            containers.clickOnSetting();
+            Thread.sleep(3000);
+            containers.clickOnTheAddContainers();
+            Thread.sleep(1000);
         containers.ClickOnTheFilterContainer();
         Thread.sleep(1000);
-containers.ClickOnTheFilterStatus();
+        containers.ClickOnTheFilterStatus();
         Thread.sleep(1000);
-containers.ClickOnTheSelectFull();
+        containers.ClickOnTheSelectFull();
         Thread.sleep(1000);
-containers.ClickOnTheFilterArrow();
+        containers.ClickOnTheFilterArrow();
         Thread.sleep(1000);
         containers.AgainClickOnTheFilter();
 
     }
-
     @Test
     public void ClearFilterContainerTest() throws IOException, InterruptedException {
-        containers containers = new containers(driver);
-        containers.enterUsername("discretalfms@gmail.com");
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
         containers.enterPassword("Leader@123");
         containers.clickLogin();
         Thread.sleep(1000);
         containers.clickOnSetting();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         containers.clickOnTheAddContainers();
         Thread.sleep(1000);
         containers.ClickOnTheFilterContainer();
@@ -302,9 +225,85 @@ containers.ClickOnTheFilterArrow();
         containers.ClickOnTheFilterContainer();
         Thread.sleep(1000);
         containers.ClickOnTheClearFilter();
+        Thread.sleep(1000);
+    }
+    @Test
+    public void SelectTheCreatedTimeTest() throws IOException, InterruptedException {
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
+        containers.enterPassword("Leader@123");
+        containers.clickLogin();
+        Thread.sleep(1000);
+        containers.clickOnSetting();
+        Thread.sleep(3000);
+        containers.clickOnTheAddContainers();
+        Thread.sleep(1000);
+        containers.ClickOnTheCreatedTime();
+        Thread.sleep(1000);
+        containers.SelectOnTheCreatedTime();
+    }
+    @Test
+    public void SearchTheContainerTest() throws IOException, InterruptedException {
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
+        containers.enterPassword("Leader@123");
+        containers.clickLogin();
+        Thread.sleep(1000);
+        containers.clickOnSetting();
+        Thread.sleep(1000);
+        containers.clickOnTheAddContainers();
+        Thread.sleep(1000);
+        containers.SearchTheContainer("2222222222");
+
+    }
+    @Test
+    public void ClickTheContainersLocationTest() throws IOException, InterruptedException {
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
+        containers.enterPassword("Leader@123");
+        containers.clickLogin();
+        Thread.sleep(1000);
+        containers.clickOnSetting();
+        Thread.sleep(3000);
+        containers.clickOnTheAddContainers();
+        Thread.sleep(2000);
+        containers.ClickOnTheLocation();
 
 
     }
+    @Test
+    public void ClickTheMovingPageTest() throws IOException, InterruptedException {
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
+        containers.enterPassword("Leader@123");
+        containers.clickLogin();
+        Thread.sleep(1000);
+        containers.clickOnSetting();
+        Thread.sleep(1000);
+        containers.clickOnTheAddContainers();
+        Thread.sleep(1000);
+containers.ClickOnTheMovingPage();
+
+
+    }
+    @Test
+    public void SelectTheZonesTest() throws IOException, InterruptedException {
+        containers containers=new containers(driver);
+        containers.enterUsername("Admin");
+        containers.enterPassword("Leader@123");
+        containers.clickLogin();
+        Thread.sleep(1000);
+        containers.clickOnSetting();
+        Thread.sleep(3000);
+        containers.clickOnTheAddContainers();
+        Thread.sleep(1000);
+        containers.ClickOnTheZZones();
+        Thread.sleep(1000);
+        containers.SelectOnTheZZones();
+        Thread.sleep(1000);
+        containers.ClickOnTheApply();
+    }
+
 
 
     @AfterMethod

@@ -98,33 +98,6 @@ protected WebDriver driver;
     }
 
     @Test
-    public void SeeTheStopsReportsTest() throws IOException, InterruptedException {
-        reports2 reports2 = new reports2(driver);
-
-        reports2.enterUsername("discretalfms@gmail.com");
-        reports2.enterPassword("Leader@123");
-        reports2.clickLogin();
-        Thread.sleep(2000);
-        reports2.clickOnTheReports();
-        Thread.sleep(1000);
-
-        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(9) > a"));
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", hiddenElement);
-        Thread.sleep(1000);
-        reports2.clickOnTheDevice();
-        Thread.sleep(1000);
-        reports2.SelectOnTheDevice();
-        Thread.sleep(1000);
-        reports2.ClickOnTheTime();
-        Thread.sleep(1000);
-        reports2.SelectOnTheTime();
-        Thread.sleep(1000);
-        reports2.ClickOnTheShow();
-    }
-
-    @Test
     public void SeeTheVechileReportsTest() throws IOException, InterruptedException {
         reports2 reports2 = new reports2(driver);
 
@@ -135,7 +108,7 @@ protected WebDriver driver;
         reports2.clickOnTheReports();
         Thread.sleep(1000);
 
-        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(8) > a"));
+        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(9) > a"));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", hiddenElement);
@@ -162,7 +135,7 @@ protected WebDriver driver;
 
     }
     @Test
-    public void SeeTheSummeryReportsTest() throws IOException, InterruptedException {
+    public void SeeTheStopsReportsTest() throws IOException, InterruptedException {
         reports2 reports2 = new reports2(driver);
 
         reports2.enterUsername("discretalfms@gmail.com");
@@ -173,6 +146,33 @@ protected WebDriver driver;
         Thread.sleep(1000);
 
         WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(10) > a"));
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", hiddenElement);
+        Thread.sleep(1000);
+        reports2.clickOnTheDevice();
+        Thread.sleep(1000);
+        reports2.SelectOnTheDevice();
+        Thread.sleep(1000);
+        reports2.ClickOnTheTime();
+        Thread.sleep(1000);
+        reports2.SelectOnTheTime();
+        Thread.sleep(1000);
+        reports2.ClickOnTheShow();
+    }
+
+    @Test
+    public void SeeTheSummeryReportsTest() throws IOException, InterruptedException {
+        reports2 reports2 = new reports2(driver);
+
+        reports2.enterUsername("discretalfms@gmail.com");
+        reports2.enterPassword("Leader@123");
+        reports2.clickLogin();
+        Thread.sleep(2000);
+        reports2.clickOnTheReports();
+        Thread.sleep(1000);
+
+        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(11) > a"));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", hiddenElement);
@@ -210,7 +210,7 @@ protected WebDriver driver;
         reports2.clickOnTheReports();
         Thread.sleep(1000);
 
-        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(11) > a"));
+        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(12) > a"));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", hiddenElement);
@@ -239,7 +239,7 @@ protected WebDriver driver;
         reports2.clickOnTheReports();
         Thread.sleep(1000);
 
-        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(12) > a"));
+        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(3) > div:nth-child(13) > a"));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", hiddenElement);
@@ -291,6 +291,28 @@ protected WebDriver driver;
     }
 
     @Test
+    public void DeleteTheScheduleReportsTest() throws IOException, InterruptedException {
+        reports2 reports2 = new reports2(driver);
+
+        reports2.enterUsername("discretalfms@gmail.com");
+        reports2.enterPassword("Leader@123");
+        reports2.clickLogin();
+        Thread.sleep(2000);
+        reports2.clickOnTheReports();
+        Thread.sleep(1000);
+
+        WebElement hiddenElement = driver.findElement(By.cssSelector("#sideMenu > div > ul:nth-child(5) > div:nth-child(2) > a"));
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", hiddenElement);
+        Thread.sleep(1000);
+        reports2.DeleteTheshecudleReport();
+    }
+
+
+
+
+    @Test
     public void SeeTheStasticsReportsTest() throws IOException, InterruptedException {
         reports2 reports2 = new reports2(driver);
 
@@ -318,6 +340,10 @@ protected WebDriver driver;
     public void teardown() {
         driver.quit();
     }
+
+
+
+
 }
 
 

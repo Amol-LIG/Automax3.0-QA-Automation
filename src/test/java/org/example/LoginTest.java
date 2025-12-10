@@ -84,7 +84,7 @@ protected WebDriver driver;
     @Test
     public void LoginTest() throws IOException, InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.enterUsername("discretalfms@gmail.com");
+        loginPage.enterUsername("Admin");
         loginPage.enterPassword("Leader@123");
 
         loginPage.clickLogin();
@@ -94,7 +94,7 @@ protected WebDriver driver;
     @Test
     public void InvalidLoginTest() throws IOException, InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.enterUsername("g.amol@leadergroup.com");
+        loginPage.enterUsername("Admin");
         loginPage.enterPassword("Leader@123");
 
         loginPage.clickLogin();
@@ -124,7 +124,7 @@ protected WebDriver driver;
     @Test
     public void LogoutTest() throws IOException, InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.enterUsername("discretalfms@gmail.com");
+        loginPage.enterUsername("Admin");
         loginPage.enterPassword("Leader@123");
 
         loginPage.clickLogin();
@@ -141,7 +141,7 @@ protected WebDriver driver;
     @Test
     public void EditAccountTest() throws IOException, InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.enterUsername("discretalfms@gmail.com");
+        loginPage.enterUsername("Admin");
         loginPage.enterPassword("Leader@123");
 
         loginPage.clickLogin();
@@ -154,12 +154,12 @@ loginPage.ClickOntheSaveAccount();
         //extent.flush();
     }
 
-
-    @AfterMethod
-    public void teardown() {
-        driver.quit();
-    }
-
+//
+//    @AfterMethod
+//    public void teardown() {
+//        driver.quit();
+//    }
+//
 
 
 

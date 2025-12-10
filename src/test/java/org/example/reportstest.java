@@ -200,6 +200,35 @@ reports.clickOnUnitGroup();
     }
 
     @Test
+    public void SeeTheContainerMovementReportsTest() throws IOException, InterruptedException {
+        reports reports = new reports(driver);
+
+        reports.enterUsername("discretalfms@gmail.com");
+        reports.enterPassword("Leader@123");
+        reports.clickLogin();
+        Thread.sleep(2000);
+        reports.clickOnTheReports();
+        Thread.sleep(1000);
+        reports.ClickOnContainerMovement();
+        Thread.sleep(1000);
+        reports.ClickOnTheDevice();
+        Thread.sleep(1000);
+reports.selectthecontaibermovementdevices();
+       // reports.SelectOnTheDevice();
+        Thread.sleep(1000);
+        reports.AgainclickOnTheDeviceManagment();
+        Thread.sleep(1000);
+     reports.ClickOnTheEventTime();
+        Thread.sleep(1000);
+        reports.selectthecontainerfortheContainerMovement();
+        Thread.sleep(1000);
+        reports.AgainclickOnTheDeviceManagment();
+       // reports.SelectOnTheEventTime();
+        Thread.sleep(1000);
+        reports.ClickOnTheShow();
+
+    }
+    @Test
     public void SeeTheContainersEventReportsTest() throws IOException, InterruptedException {
         reports reports = new reports(driver);
 
@@ -264,4 +293,5 @@ reports.clickOnUnitGroup();
     public void teardown() {
         driver.quit();
     }
+
 }

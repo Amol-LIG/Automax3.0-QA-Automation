@@ -37,6 +37,7 @@ private By SSelectTime =By.xpath("(//li[@role='option'])[6]");
 private By ClickSummery =By.xpath("(//div[@class='MuiFormControl-root MuiFormControl-fullWidth css-tzsjye'])[4]");
 private By SelectSummery =By.xpath("(//li[@role='option'])[2]");
 
+private By DeleteSechduleReport =By.xpath("(//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1j7qk7u'])[1]");
 
 
 
@@ -150,7 +151,10 @@ private By SelectSummery =By.xpath("(//li[@role='option'])[2]");
     }
 
 
-
+    public void DeleteTheshecudleReport() {
+        WebElement DELETES = wait.until(ExpectedConditions.visibilityOfElementLocated(DeleteSechduleReport));
+        DELETES.click();
+    }
 
 
 }

@@ -27,10 +27,10 @@ private By Search =By.xpath("//input[@class='MuiInputBase-input MuiOutlinedInput
 private By ClickEdit =By.xpath("(//button[@type='button'])[6]");
 private By Delete =By.xpath("(//button[@type='button'])[7]");
     private By ClickRemove =By.xpath("//button[text()='Remove']");
-
-
-
-
+private By ClickContainerInContainergroup =By.xpath("(//div[@class='MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-l0jafl'])[1]");
+private By ClickSelectContainerInContainerGroup =By.xpath("(//button[normalize-space()='Select Markers'])[1]");
+private By SelectMarkerInContainerGroup =By.xpath("//*[@id=\"1\"]/td[1]/span");
+private By SaveMarkeriNcOntainerGroup =By.xpath("(//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary float-right css-1u2neql'])[1]");
 
 
     // Constructor to initialize driver
@@ -105,8 +105,26 @@ private By Delete =By.xpath("(//button[@type='button'])[7]");
         WebElement CLICKDELETE= wait.until(ExpectedConditions.visibilityOfElementLocated(Delete));
         CLICKDELETE.click();
     }
-
-
+    public void ClickOnTheContainerinContainergroup()
+    {
+        WebElement CLICKCONTAINEINCONATAINERGROUP= wait.until(ExpectedConditions.visibilityOfElementLocated(ClickContainerInContainergroup));
+        CLICKCONTAINEINCONATAINERGROUP.click();
+    }
+    public void ClickSelectOnTheContainerinContainergroup()
+    {
+        WebElement CLICKSELECTCONTAINEINCONATAINERGROUP= wait.until(ExpectedConditions.visibilityOfElementLocated(ClickSelectContainerInContainerGroup));
+        CLICKSELECTCONTAINEINCONATAINERGROUP.click();
+    }
+    public void SelectMarkerinContainergroup()
+    {
+        WebElement SELECTMAKERINEINCONATAINERGROUP= wait.until(ExpectedConditions.visibilityOfElementLocated(SelectMarkerInContainerGroup));
+        SELECTMAKERINEINCONATAINERGROUP.click();
+    }
+    public void SaveSelectMarkerinContainergroup()
+    {
+        WebElement SAVESELECTMAKERINEINCONATAINERGROUP= wait.until(ExpectedConditions.visibilityOfElementLocated(SaveMarkeriNcOntainerGroup));
+        SAVESELECTMAKERINEINCONATAINERGROUP.click();
+    }
 
     public void ClickOnTheRemove()
     {

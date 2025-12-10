@@ -74,7 +74,7 @@ protected WebDriver driver;
     public void ClickOnTheZonesTest() throws IOException, InterruptedException
     {
         zones zones=new zones(driver);
-        zones.enterUsername("discretalfms@gmail.com");
+        zones.enterUsername("Admin");
         zones.enterPassword("Leader@123");
         zones.clickLogin();
         Thread.sleep(1000);
@@ -88,7 +88,7 @@ protected WebDriver driver;
     public void EditTheZonesTest() throws IOException, InterruptedException
     {
         zones zones=new zones(driver);
-        zones.enterUsername("discretalfms@gmail.com");
+        zones.enterUsername("Admin");
         zones.enterPassword("Leader@123");
         zones.clickLogin();
         Thread.sleep(1000);
@@ -96,7 +96,19 @@ protected WebDriver driver;
         Thread.sleep(1000);
         zones.clickOnTheZones();
         Thread.sleep(1000);
-zones.clickOnTheEditZones();
+   zones.clickOnTheEditZones();
+        Thread.sleep(1000);
+        zones.ClickOnTheExtraInZone();
+        Thread.sleep(1000);
+        zones.ClearEnterTheDescriptionInZone();
+        Thread.sleep(1500);
+        zones.ClickOnTheSave();
+        Thread.sleep(1000);
+        zones.clickOnTheEditZones();
+        Thread.sleep(1000);
+        zones.ClickOnTheExtraInZone();
+        Thread.sleep(2000);
+        zones.EnterTheDescriptionInZone("Testing Purpose");
         Thread.sleep(1500);
         zones.ClickOnTheSave();
     }
@@ -106,7 +118,7 @@ zones.clickOnTheEditZones();
     public void DeleteTheZonesTest() throws IOException, InterruptedException
     {
         zones zones=new zones(driver);
-        zones.enterUsername("discretalfms@gmail.com");
+        zones.enterUsername("Admin");
         zones.enterPassword("Leader@123");
         zones.clickLogin();
         Thread.sleep(1000);
@@ -119,11 +131,11 @@ zones.clickOnTheEditZones();
      //   zones.ClickOnTheRemove();
     }
 
-
-    @AfterMethod
-    public void teardown() {
-        driver.quit();
-    }
+//
+//    @AfterMethod
+//    public void teardown() {
+//        driver.quit();
+//    }
 
 
 

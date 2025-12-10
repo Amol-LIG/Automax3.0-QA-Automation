@@ -8,8 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class containers {
-
+public class conatiner1 {
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -35,12 +34,12 @@ public class containers {
     private By SelectZones =By.xpath("(//li[@role='option'])[2]");
     private By ClickSave =By.xpath("//button[text()='Save']");
     private By ClickContainerStatus =By.xpath("//*[@id=\"Capa_1\"]");
-    private By ClickEdit =By.xpath("//*[@id=\"1\"]/td[7]/div/button[1]");
+    private By ClickEdit =By.xpath("(//*[name()='path'])[6]");
     private By ClickNanan =By.xpath("(//div[@class='MuiFormControl-root css-13sljp9'])[2]");
     private By SelectQwell =By.xpath("(//li[@role='option'])[3]");
     private By DeleteContainers =By.xpath("(//button[@title='delete'])[1]");
     private By ClickRemove =By.xpath("//button[text()='Remove']");
-    private By ClickLocation =By.xpath("//*[@id=\"1\"]/td[7]/div/button[3]");
+    private By ClickLocation =By.xpath("//*[@id=\"270\"]/td[7]/div/button[3]");
     private By MovingPage =By.xpath("//button[@class='lg:!w-12']//*[name()='svg']");
     private By CClickZones =By.xpath("//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1hf94h2']");
     private By SelectZZones =By.xpath("//li[@id='checkboxes-tags-demo-option-1']");
@@ -50,7 +49,7 @@ public class containers {
     private By SearchContainer =By.xpath("//input[@placeholder='Search']");
     private By ClickFilter =By.xpath("//img[@alt='Filter icon']");
     private By ClickFStatus =By.xpath("//div[@class='MuiFormControl-root css-13sljp9']//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-l3s3o4']");
-    private By SelectFull =By.xpath("//li[text()='Full (4)']");
+    private By SelectFull =By.xpath("//*[@id=\":r27:\"]/li[3]");
     private  By ClickSArrow =By.xpath("//div[@id='menu-']//div[@class='MuiBackdrop-root MuiBackdrop-invisible MuiModal-backdrop css-esi9ax']");
     private By AgainFilterClick =By.xpath("//div[@class='MuiBackdrop-root MuiBackdrop-invisible MuiModal-backdrop css-esi9ax']");
     private By ClickClearFilter =By.xpath("//button[@aria-label='Clear Filter']");
@@ -61,7 +60,7 @@ public class containers {
 
 
     // Constructor to initialize driver
-    public containers(WebDriver driver) {
+    public conatiner1(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
@@ -289,6 +288,36 @@ public class containers {
         WebElement CLEARCLICKFILTER= wait.until(ExpectedConditions.visibilityOfElementLocated(ClickClearFilter));
         CLEARCLICKFILTER.click();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

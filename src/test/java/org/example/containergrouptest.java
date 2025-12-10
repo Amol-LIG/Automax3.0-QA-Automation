@@ -77,7 +77,7 @@ protected WebDriver driver;
     public void ClickOnTheContainerGroupTest() throws IOException, InterruptedException
     {
         containergroup containergroup=new containergroup(driver);
-        containergroup.enterUsername("discretalfms@gmail.com");
+        containergroup.enterUsername("Admin");
         containergroup.enterPassword("Leader@123");
         containergroup.clickLogin();
         Thread.sleep(1000);
@@ -91,7 +91,7 @@ protected WebDriver driver;
     public void CreateTheContainerGroupTest() throws IOException, InterruptedException
     {
         containergroup containergroup=new containergroup(driver);
-        containergroup.enterUsername("discretalfms@gmail.com");
+        containergroup.enterUsername("Admin");
         containergroup.enterPassword("Leader@123");
         containergroup.clickLogin();
         Thread.sleep(1000);
@@ -103,6 +103,14 @@ protected WebDriver driver;
         Thread.sleep(1000);
 containergroup.EnterTheName("arsan1");
         Thread.sleep(1000);
+        containergroup.ClickOnTheContainerinContainergroup();
+        Thread.sleep(1000);
+        containergroup.ClickSelectOnTheContainerinContainergroup();
+        Thread.sleep(2000);
+containergroup.SelectMarkerinContainergroup();
+        Thread.sleep(1000);
+        containergroup.SaveSelectMarkerinContainergroup();
+        Thread.sleep(2000);
         containergroup.ClickOnTheSave();
 
     }
@@ -110,7 +118,7 @@ containergroup.EnterTheName("arsan1");
     @Test
     public void SearchTheContainerGroupTest() throws IOException, InterruptedException {
         containergroup containergroup = new containergroup(driver);
-        containergroup.enterUsername("discretalfms@gmail.com");
+        containergroup.enterUsername("Admin");
         containergroup.enterPassword("Leader@123");
         containergroup.clickLogin();
         Thread.sleep(1000);
@@ -126,7 +134,7 @@ containergroup.EnterTheName("arsan1");
     @Test
     public void EditTheContainerGroupTest() throws IOException, InterruptedException {
         containergroup containergroup = new containergroup(driver);
-        containergroup.enterUsername("discretalfms@gmail.com");
+        containergroup.enterUsername("Admin");
         containergroup.enterPassword("Leader@123");
         containergroup.clickLogin();
         Thread.sleep(1000);
@@ -144,7 +152,7 @@ containergroup.ClickOnTheEdit();
     @Test
     public void DeleteTheContainerGroupTest() throws IOException, InterruptedException {
         containergroup containergroup = new containergroup(driver);
-        containergroup.enterUsername("discretalfms@gmail.com");
+        containergroup.enterUsername("Admin");
         containergroup.enterPassword("Leader@123");
         containergroup.clickLogin();
         Thread.sleep(1000);
@@ -157,12 +165,22 @@ containergroup.ClickOnTheEdit();
       //  containergroup.ClickOnTheRemove();
 
     }
+//
+//
+//    @AfterMethod
+//    public void teardown() {
+//        driver.quit();
+//    }
 
 
-    @AfterMethod
-    public void teardown() {
-        driver.quit();
-    }
+
+
+
+
+
+
+
+
 }
 
 

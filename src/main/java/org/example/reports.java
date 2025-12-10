@@ -52,7 +52,9 @@ private By ClickContainer =By.xpath("(//div[@class='MuiFormControl-root MuiFormC
 private By SelectContainer =By.xpath("(//span[@class='MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-jmsmgp'])[3]");
 private By AgainClickContainer =By.xpath("#root > div");
 
-
+private By ClickContainerMovement =By.xpath("//span[@aria-label='Container Movement']");
+    private By ContainerMovementSelectDevice =By.xpath("(//li[@role='option'])[2]");
+    private By SelectDeviceMovement =By.xpath("(//li[@role='option'])[2]");
 
 
 
@@ -228,7 +230,23 @@ private By AgainClickContainer =By.xpath("#root > div");
     }
 
 
+    public void ClickOnContainerMovement() {
+        WebElement CONTAINERMOVEMENT= wait.until(ExpectedConditions.visibilityOfElementLocated(ClickContainerMovement));
+        CONTAINERMOVEMENT.click();
+    }
 
+
+
+    public void selectthecontaibermovementdevices() {
+        WebElement SELECTDEVICECONTAINERMOVEMENT= wait.until(ExpectedConditions.visibilityOfElementLocated(ContainerMovementSelectDevice));
+        SELECTDEVICECONTAINERMOVEMENT.click();
+    }
+
+
+    public void selectthecontainerfortheContainerMovement() {
+        WebElement SELECTCONTAINERMOVEMENTDEVICE= wait.until(ExpectedConditions.visibilityOfElementLocated(SelectDeviceMovement));
+        SELECTCONTAINERMOVEMENTDEVICE.click();
+    }
 
 
 
